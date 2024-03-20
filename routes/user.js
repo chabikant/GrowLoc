@@ -38,6 +38,11 @@ router.put('/update/:id', async(req,res)=>{
 
 })
 
+router.get("/allUsers", async(req,res)=>{
+    const users = await userModel.find();
+    console.log(users);
+})
+
 
 
 module.exports=router;
