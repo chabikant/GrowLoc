@@ -6,10 +6,12 @@ const   UserSchema=new mongoose.Schema({
         required: true,
         
     },
-    age:{
-        type: Number,
-        required: true,
+    email:{
+        type:String,
+        unique: true,
+        required:true,
     }
+    
 
 })
 
