@@ -12,15 +12,13 @@ router.post('/add',async(req,res)=>{
 // get a user by id 
 router.get('/:id',async(req,res)=>{
     const {id} = req.params;
+    // console.log(id);
     const client = await userModel.findById(id);
+    // console.log(client);
     return res.send(client);
 })
 
-// get all user 
-router.get('/alluser',async(req,res)=>{
-    const Users = await userModel.find();
-    res.send(Users);
-})
+
 
 // delete the user by id 
 router.delete('/delete/:id', async(req,res)=>{
@@ -39,5 +37,7 @@ router.put('/update/:id', async(req,res)=>{
 
 
 })
+
+
 
 module.exports=router;
